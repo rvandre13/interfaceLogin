@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menucadastro">
+        <div class="text1">
+            <p>Bem vindo ao nosso website</p>
+        </div>
+        <div class="text2">Inscreva-se já!</div>
+    </div>
+
+    <div class="menucadastro2">
+        
+        <div class="text3">Login de usuário</div>
+
+        <div class="text4">
+
+            <div class="text5">
+
+                <form action="/action_page.php">
+
+                    <label for="login">Usuário:</label><br>
+                    <input type="text" id="login" name="login" value=""><br>
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" id="senha" name="senha" value=""><br><br>
+                    <input class="enviar" type="submit" onclick="logar(); return false"> &nbsp; &nbsp; &nbsp;
+                    <a class="cadastre" href="cadastro.html"><button>Cadastre-se</button> </a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+    function logar(){
+
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+
+        if(login == "admin" && senha == "admin"){
+            
+            alert('Logado com Sucesso');
+            location.href = "home.html"
+
+        }else{
+
+            alert('Usuário ou Senha Incorretos')
+
+        }
+    }
+    </script>
+</body>
+</html>
